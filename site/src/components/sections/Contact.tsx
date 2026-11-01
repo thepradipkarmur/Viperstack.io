@@ -69,19 +69,7 @@ const Contact = () => {
 
   return (
     <section id="contact" className="py-24 hero-gradient relative overflow-hidden" ref={ref}>
-      {/* Grid Pattern */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div 
-          className="absolute inset-0 opacity-[0.08]"
-          style={{
-            backgroundImage: `
-              linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
-              linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px)
-            `,
-            backgroundSize: '60px 60px'
-          }}
-        />
-      </div>
+      <div className="hairline absolute inset-x-0 top-0" />
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="grid md:grid-cols-2 gap-12 lg:gap-20 items-start max-w-5xl">
@@ -91,7 +79,7 @@ const Contact = () => {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+            <h2 className="text-5xl md:text-6xl text-chrome mb-4 leading-[1.05]">
               Contact us.
             </h2>
             <p className="text-lg text-muted-foreground mb-8">
@@ -125,7 +113,7 @@ const Contact = () => {
               href="https://calendar.app.google/cg39LGy5K82i4qqA6"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block bg-success hover:bg-success/90 text-white font-medium text-lg px-8 py-4 rounded-lg transition-colors"
+              className="btn-gold text-base px-8 py-4"
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.3 }}
@@ -154,7 +142,7 @@ const Contact = () => {
                   required
                   value={formData.firstName}
                   onChange={handleChange}
-                  className="bg-card/50 border-border/50 focus:border-primary h-12"
+                  className="bg-white/[0.02] border-white/10 rounded-xl focus-visible:ring-[#d6b26a]/40 focus:border-[#d6b26a]/50 h-12"
                   placeholder=""
                 />
               </div>
@@ -170,7 +158,7 @@ const Contact = () => {
                   required
                   value={formData.email}
                   onChange={handleChange}
-                  className="bg-card/50 border-border/50 focus:border-primary h-12"
+                  className="bg-white/[0.02] border-white/10 rounded-xl focus-visible:ring-[#d6b26a]/40 focus:border-[#d6b26a]/50 h-12"
                   placeholder=""
                 />
               </div>
@@ -185,7 +173,7 @@ const Contact = () => {
                   required
                   value={formData.message}
                   onChange={handleChange}
-                  className="bg-card/50 border-border/50 focus:border-primary min-h-[120px] resize-none"
+                  className="bg-white/[0.02] border-white/10 rounded-xl focus-visible:ring-[#d6b26a]/40 focus:border-[#d6b26a]/50 min-h-[120px] resize-none"
                   placeholder=""
                 />
               </div>
@@ -194,7 +182,7 @@ const Contact = () => {
                 <Button
                   type="submit"
                   disabled={isSubmitting}
-                  className="bg-success hover:bg-success/90 text-white px-8 py-3 h-auto"
+                  className="btn-gold px-8 py-3 h-auto"
                 >
                   {isSubmitting ? 'Sending...' : 'Submit'}
                 </Button>

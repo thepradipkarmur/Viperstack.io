@@ -14,8 +14,9 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
-        mono: ['JetBrains Mono', 'monospace'],
+        sans: ['Geist', 'system-ui', 'sans-serif'],
+        mono: ['Geist Mono', 'ui-monospace', 'monospace'],
+        display: ['Instrument Serif', 'Georgia', 'serif'],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -52,23 +53,12 @@ export default {
           foreground: "hsl(var(--card-foreground))",
         },
         // ViperStack Custom Colors
-        navy: {
-          DEFAULT: "hsl(var(--navy))",
-          light: "hsl(var(--navy-light))",
+        gold: {
+          DEFAULT: "hsl(var(--gold))",
+          deep: "hsl(var(--gold-deep))",
+          pale: "hsl(var(--gold-pale))",
         },
-        cyan: {
-          DEFAULT: "hsl(var(--cyan))",
-          dark: "hsl(var(--cyan-dark))",
-        },
-        purple: {
-          DEFAULT: "hsl(var(--purple))",
-          light: "hsl(var(--purple-light))",
-        },
-        gray: {
-          light: "hsl(var(--gray-light))",
-          soft: "hsl(var(--gray-soft))",
-          mid: "hsl(var(--gray-mid))",
-        },
+        silver: "hsl(var(--silver))",
         success: "hsl(var(--success))",
       },
       borderRadius: {
@@ -94,8 +84,8 @@ export default {
           "50%": { transform: "translateY(-10px)" },
         },
         "pulse-glow": {
-          "0%, 100%": { boxShadow: "0 0 20px rgba(0, 217, 255, 0.3)" },
-          "50%": { boxShadow: "0 0 40px rgba(0, 217, 255, 0.5)" },
+          "0%, 100%": { boxShadow: "0 0 20px rgba(214, 178, 106, 0.25)" },
+          "50%": { boxShadow: "0 0 40px rgba(214, 178, 106, 0.45)" },
         },
       },
       animation: {
@@ -104,6 +94,7 @@ export default {
         "fade-in": "fade-in 0.6s ease-out forwards",
         "float": "float 3s ease-in-out infinite",
         "pulse-glow": "pulse-glow 2s ease-in-out infinite",
+        marquee: "marquee 40s linear infinite",
       },
     },
   },

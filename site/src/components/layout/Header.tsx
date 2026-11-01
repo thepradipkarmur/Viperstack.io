@@ -15,6 +15,9 @@ const Header = () => {
     label: 'Home',
     href: '#'
   }, {
+    label: 'Live',
+    href: '#live'
+  }, {
     label: 'Products',
     href: '#pricing'
   }, {
@@ -57,8 +60,8 @@ const Header = () => {
           }} className="flex items-center gap-2" whileHover={{
             scale: 1.02
           }}>
-              <img src="/viperstack-logo.png" alt="ViperStack logo" width={36} height={36} className="w-9 h-9 rounded-full" />
-              <span className="text-xl font-bold text-foreground">ViperStack</span>
+              <img src="/viperstack-logo.png" alt="ViperStack logo" width={36} height={36} className="w-9 h-9 rounded-full ring-1 ring-[#d6b26a]/30 shadow-[0_0_20px_rgba(214,178,106,0.25)]" />
+              <span className="font-display text-2xl tracking-tight text-chrome">ViperStack</span>
             </motion.a>
 
             {/* Desktop Navigation */}
@@ -66,13 +69,13 @@ const Header = () => {
               {navItems.map(item => <a key={item.label} href={item.href} onClick={e => {
               e.preventDefault();
               scrollToSection(item.href);
-            }} className="text-muted-foreground hover:text-primary transition-colors duration-200 font-medium">
+            }} className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-200">
                   {item.label}
                 </a>)}
               <motion.a href="#contact" onClick={e => {
               e.preventDefault();
               scrollToSection('#contact');
-            }} className="btn-primary" whileHover={{
+            }} className="btn-gold px-5 py-2.5 text-sm" whileHover={{
               scale: 1.02
             }} whileTap={{
               scale: 0.98
@@ -113,7 +116,7 @@ const Header = () => {
             y: 0
           }} transition={{
             delay: index * 0.1
-          }} className="text-2xl font-semibold text-foreground hover:text-primary transition-colors">
+          }} className="font-display text-4xl text-foreground hover:text-gold transition-colors">
                   {item.label}
                 </motion.a>)}
               <motion.a href="#contact" onClick={e => {
@@ -127,7 +130,7 @@ const Header = () => {
             y: 0
           }} transition={{
             delay: 0.4
-          }} className="btn-primary mt-4">
+          }} className="btn-gold px-7 py-3 mt-4">
                 Schedule a Call
               </motion.a>
             </div>

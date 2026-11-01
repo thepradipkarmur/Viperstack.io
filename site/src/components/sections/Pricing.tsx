@@ -89,19 +89,7 @@ const Pricing = () => {
 
   return (
     <section id="pricing" className="py-24 hero-gradient relative overflow-hidden" ref={ref}>
-      {/* Grid Pattern */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div 
-          className="absolute inset-0 opacity-[0.08]"
-          style={{
-            backgroundImage: `
-              linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
-              linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px)
-            `,
-            backgroundSize: '60px 60px'
-          }}
-        />
-      </div>
+      <div className="hairline absolute inset-x-0 top-0" />
 
       <div className="container mx-auto px-6 relative z-10">
         {/* Section Header */}
@@ -111,7 +99,7 @@ const Pricing = () => {
           transition={{ duration: 0.6 }}
           className="mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+          <h2 className="text-5xl md:text-6xl text-chrome mb-4 leading-[1.05]">
             Products & Pricing.
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl">
@@ -127,22 +115,20 @@ const Pricing = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className={`bg-card/80 backdrop-blur-sm border rounded-2xl p-8 flex flex-col ${
-                product.featured ? 'border-accent' : 'border-border/50'
-              }`}
+              className={`metal-card spotlight p-8 flex flex-col ${product.featured ? 'gold-ring lg:col-span-1' : ''}`}
             >
               {product.featured && (
-                <div className="inline-block bg-accent text-accent-foreground text-xs font-semibold px-3 py-1 rounded-full mb-6 w-fit">
+                <div className="eyebrow mb-6 w-fit !text-[#e8cf94] !border-[#d6b26a]/40">
                   MOST COMPREHENSIVE
                 </div>
               )}
 
-              <div className="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center mb-6">
+              <div className="w-12 h-12 rounded-xl border border-[#d6b26a]/25 bg-gradient-to-b from-[#d6b26a]/15 to-transparent flex items-center justify-center mb-6">
                 <product.icon className="w-6 h-6 text-primary" />
               </div>
 
               <h3 className="text-xl font-bold text-foreground mb-2">{product.name}</h3>
-              <p className="text-4xl font-bold text-primary mb-1">{product.price}</p>
+              <p className="font-display text-5xl text-gold mb-1">{product.price}</p>
               <p className="text-sm text-muted-foreground mb-4">{product.priceNote}</p>
               <p className="text-muted-foreground mb-6 leading-relaxed flex-grow">{product.description}</p>
 
@@ -164,11 +150,7 @@ const Pricing = () => {
                 href="https://calendar.app.google/cg39LGy5K82i4qqA6"
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`w-full text-center font-semibold py-3 rounded-lg transition-all duration-200 mt-auto ${
-                  product.featured
-                    ? 'bg-accent text-accent-foreground hover:bg-accent/90'
-                    : 'bg-success text-white hover:bg-success/90'
-                }`}
+                className={`w-full py-3 mt-auto ${product.featured ? 'btn-gold' : 'btn-metal'}`}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >

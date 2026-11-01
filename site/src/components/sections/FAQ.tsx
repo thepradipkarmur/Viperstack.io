@@ -47,19 +47,7 @@ const FAQ = () => {
 
   return (
     <section className="py-24 hero-gradient relative overflow-hidden" ref={ref}>
-      {/* Grid Pattern */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div 
-          className="absolute inset-0 opacity-[0.08]"
-          style={{
-            backgroundImage: `
-              linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
-              linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px)
-            `,
-            backgroundSize: '60px 60px'
-          }}
-        />
-      </div>
+      <div className="hairline absolute inset-x-0 top-0" />
 
       <div className="container mx-auto px-6 relative z-10">
         {/* Section Header */}
@@ -69,7 +57,7 @@ const FAQ = () => {
           transition={{ duration: 0.6 }}
           className="mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+          <h2 className="text-5xl md:text-6xl text-chrome mb-4 leading-[1.05]">
             Frequently Asked Questions.
           </h2>
         </motion.div>
@@ -79,7 +67,7 @@ const FAQ = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="max-w-3xl"
+          className="metal-card max-w-3xl px-8"
         >
           {faqs.map((faq, index) => (
             <div

@@ -25,7 +25,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-background border-t border-border/30 py-16">
+    <footer className="relative bg-background py-16"><div className="hairline absolute inset-x-0 top-0" />
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Branding */}
@@ -39,10 +39,10 @@ const Footer = () => {
               className="flex items-center gap-2 mb-4"
               whileHover={{ scale: 1.02 }}
             >
-              <img src="/viperstack-logo.png" alt="ViperStack logo" width={36} height={36} className="w-9 h-9 rounded-full" />
-              <span className="text-xl font-bold text-foreground">ViperStack</span>
+              <img src="/viperstack-logo.png" alt="ViperStack logo" width={36} height={36} className="w-9 h-9 rounded-full ring-1 ring-[#d6b26a]/30" />
+              <span className="font-display text-2xl tracking-tight text-chrome">ViperStack</span>
             </motion.a>
-            <p className="text-sm text-primary mb-2">AI Stack for Modern GTM</p>
+            <p className="font-display text-lg italic text-gold mb-2">AI Stack for Modern GTM</p>
             <p className="text-sm text-muted-foreground leading-relaxed max-w-xs">
               Full-stack GTM automation for B2B companies
             </p>

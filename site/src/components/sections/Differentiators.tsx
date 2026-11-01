@@ -36,19 +36,7 @@ const Differentiators = () => {
 
   return (
     <section id="about" className="py-24 hero-gradient relative overflow-hidden" ref={ref}>
-      {/* Grid Pattern */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div 
-          className="absolute inset-0 opacity-[0.08]"
-          style={{
-            backgroundImage: `
-              linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
-              linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px)
-            `,
-            backgroundSize: '60px 60px'
-          }}
-        />
-      </div>
+      <div className="hairline absolute inset-x-0 top-0" />
 
       <div className="container mx-auto px-6 relative z-10">
         {/* Section Header */}
@@ -58,7 +46,7 @@ const Differentiators = () => {
           transition={{ duration: 0.6 }}
           className="mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+          <h2 className="text-5xl md:text-6xl text-chrome mb-4 leading-[1.05]">
             Why ViperStack?
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl">
@@ -75,10 +63,10 @@ const Differentiators = () => {
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               whileHover={{ y: -4 }}
-              className="bg-card/80 backdrop-blur-sm border border-border/50 rounded-2xl p-8 group transition-all hover:border-primary/30"
+              className="metal-card spotlight p-8 group"
             >
               <div className="flex items-start justify-between mb-6">
-                <div className="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center">
+                <div className="w-12 h-12 rounded-xl border border-[#d6b26a]/25 bg-gradient-to-b from-[#d6b26a]/15 to-transparent flex items-center justify-center">
                   <item.icon className="w-6 h-6 text-primary" />
                 </div>
                 <ArrowRight className="w-5 h-5 text-muted-foreground group-hover:text-primary group-hover:translate-x-1 transition-all" />
